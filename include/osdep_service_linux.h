@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Copyright(c) 2007 - 2013 Realtek Corporation. All rights reserved.
+ * Copyright(c) 2007 - 2017 Realtek Corporation. All rights reserved.
  *                                        
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of version 2 of the GNU General Public License as
@@ -46,6 +46,9 @@
 #endif
 	#include <linux/sem.h>
 	#include <linux/sched.h>
+#if (LINUX_VERSION_CODE >= KERNEL_VERSION(4,10,0))
+	#include <linux/sched/signal.h>
+#endif
 	#include <linux/etherdevice.h>
 	#include <linux/wireless.h>
 	#include <net/iw_handler.h>
